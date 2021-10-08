@@ -1,0 +1,248 @@
+:root {
+  --color-rightContainer-background: #333334;
+  --color-border: #0189ff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typography */
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Main Outer Block */
+.mainOuterBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .mainOuterBlock {
+    flex-direction: row;
+    /* flex-basis: 20rem; */
+    position: relative;
+  }
+}
+
+/* left Container */
+.avatarHolder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+}
+
+.logoContainer > img {
+  width: 170px;
+  height: 70px;
+}
+
+.toolName {
+  font-size: 2.4rem;
+  color: #8c8c8c;
+  font-weight: 500;
+  margin: 1rem 0rem 0.3rem 0rem;
+}
+
+.toolInfo {
+  font-size: 1.5rem;
+  color: #2793ff;
+  margin-bottom: 3rem;
+  padding: 0rem 0.4rem;
+}
+
+.footerBottom {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .leftMainContainer {
+    flex-grow: 1;
+    padding: 3rem;
+  }
+
+  .avatarHolder {
+    text-align: left;
+  }
+
+  .logoContainer > img {
+    width: 240px;
+    height: 100px;
+  }
+
+  .toolName {
+    font-size: 6rem;
+  }
+
+  .toolInfo {
+    font-size: 2rem;
+  }
+
+  .footerBottom {
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    width: 60vw;
+  }
+
+  .footertext {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0rem 0;
+  }
+
+  .footerlink {
+    padding: 0.2rem;
+    transition: color 0.15s;
+    cursor: pointer;
+  }
+
+  .footerlink:hover {
+    color: #f5911e;
+  }
+
+  .copyRight,
+  .footerNotes {
+    color: #8c8c8c;
+    font-size: 1.2rem;
+  }
+}
+
+/* Right Container */
+.rightMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+  background-color: var(--color-rightContainer-background);
+  width: 100vw;
+  height: 100vh;
+}
+
+@media screen and (min-width: 768px) {
+  .rightMainContainer {
+    flex-grow: 0;
+    flex-basis: 45rem;
+    justify-content: center;
+  }
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formHolder {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+/* welcome Text Container */
+.welcomeTextContainer {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin: 1rem 0rem 2rem 0rem;
+  font-size: 2rem;
+}
+
+/* Form Container */
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 300px;
+}
+
+/* Input */
+.input {
+  border: 0px;
+  border-bottom: 1px solid var(--color-border);
+  color: #f5911e;
+  font-size: 1.6rem;
+  outline: 0;
+  width: 300px;
+  background: var(--color-rightContainer-background);
+}
+
+::placeholder {
+  color: grey;
+  font-weight: 300;
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+.labelName {
+  margin-top: 3rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.rememLabel {
+  font-size: 1.2rem;
+}
+
+.rememLabelClick > img {
+  width: 15px;
+  height: 15px;
+  filter: grayscale(100%);
+}
+
+/* Submit Container */
+.submitContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+/* Button */
+.loginButton {
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 1rem 0;
+  outline: 0;
+  padding: 0.8rem 4.3rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: #0189ff;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: #3393ea;
+}
+
+@media screen and (min-width: 768px) {
+  .loginButton {
+    font-size: 2rem;
+    padding: 0.6rem 3.5rem;
+    font-weight: 500;
+  }
+}
+.fpswBox {
+  font-size: 1.6rem;
+}
